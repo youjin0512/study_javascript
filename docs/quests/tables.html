@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Customer CSS commons.css -->
+    <link rel="stylesheet" href="../css/commons.css">
+</head>
+
+<body>
+    <nav>nav</nav>
+    <main class="container">
+        <h2>Basic Table</h2>
+        <!-- <table class="table table-bordered"> tr(행) 아래에만 선이 그어짐 -->
+        <table class="table table-bordered"> <!-- 표 전체에 선이 그어짐  -->
+            <!-- <table class="table table-bordered table-striped"> 줄무늬  -->
+            <table class="table table-hover table-bordered table-striped"> <!-- 마우스 가져다대면 색깔이 바뀜  -->
+                <thead>
+                    <tr>
+                        <th>Firstname</th>
+                        <th>Lastname</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>John</td>
+                        <td>Doe</td>
+                        <td>john@example.com</td>
+                    </tr>
+                    <tr>
+                        <td id=first_td>Mary</td>
+                        <td id=second_td>Moe</td>
+                        <td id=third_td>mary@example.com</td>
+                    </tr>
+                    <tr id="first_tr">
+                        <td>July</td>
+                        <td>Dooley</td>
+                        <td>july@example.com</td>
+                    </tr>
+                </tbody>
+            </table>
+    </main>
+    <footer>footer</footer>
+</body>
+<!-- Latest compiled JavaScript -->
+<script>
+    // # Mary -> COCO
+    let first_td = document.querySelector("#first_td")
+    // undefined
+    first_td
+    // < td id = "first_td" > Mary​</td >
+    first_td.innerHTML = `COCO`
+    // 'COCO'
+
+    // # Moe -> LAB
+    let second_td = document.querySelector("#second_td")
+    // undefined
+    second_td
+    // < td id = "second_td" > Moe​</td >
+    second_td.innerHTML = `LAB`
+    // 'LAB'
+
+    // # mary@example.com -> coco@cocolabhub.com
+    let third_td = document.querySelector("#third_td")
+    // undefined
+    third_td
+    // < td id = "third_td" > mary@example.com​</td >
+    third_td.innerHTML = `coco@cocolabhub.com`
+    // 'coco@cocolabhub.com'
+
+    // # 3행 삭제
+    let first_tr = document.querySelector("#first_tr")
+    // undefined
+    first_tr
+    // <tr id=​"first_tr">​…​</tr>​
+    first_tr.innerHTML = ``
+    // ''
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</html>
