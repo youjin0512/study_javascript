@@ -18,7 +18,7 @@ service_list.addEventListener('click', async (event) => {
   try {
     let response = await fetch(url, options);  // # send
 
-    let result = await response.json(); // # 응답  // json으로 바꾸는 자바스크립트 역할
+    let result = await response.json(); // # 응답  // 내부에 있는 내용이 json으로 바뀌는 자바스크립트 역할
 
     console.log(`response result : ${result}`)
     const mobility_array = result['response']['body']['items']['item'];
